@@ -15,9 +15,11 @@ import {
   StyleSheet,
   FlatList,
   Platform,
+  Touchable,
+  processColor
 } from 'react-native';
-import processColor from 'react-native/Libraries/StyleSheet/processColor';
-import Touchable from 'react-native/Libraries/Components/Touchable/Touchable';
+// import processColor from 'react-native/Libraries/StyleSheet/processColor';
+// import Touchable from 'react-native/Libraries/Components/Touchable/Touchable';
 import deepEqual from 'fbjs/lib/areEqual';
 import PropTypes from 'prop-types';
 
