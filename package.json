@@ -3,11 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/react-native-gesture-handler",
-    "apps/basic-example",
-    "apps/expo-example",
-    "apps/macos-example",
-    "apps/common-app"
+    "packages/react-native-gesture-handler"
   ],
   "scripts": {
     "postinstall": "yarn build",
