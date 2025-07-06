@@ -101,7 +101,8 @@ void decorateRuntime(jsi::Runtime &runtime)
         if (!arguments[0].isObject()) {
           return jsi::Value::null();
         }
-        auto shadowNode = shadowNodeFromValue(runtime, arguments[0]);
+        auto shadowNodeList = shadowNodeListFromValue(runtime, arguments[0]);
+        auto shadowNode = shadowNodeList->at(0);
 
         if (dynamic_pointer_cast<const ParagraphShadowNode>(shadowNode)) {
           return jsi::Value(true);
@@ -112,6 +113,7 @@ void decorateRuntime(jsi::Runtime &runtime)
         }
 
         bool isViewFlatteningDisabled = shadowNode->getTraits().check(ShadowNodeTraits::FormsStackingContext);
+          
 
         return jsi::Value(isViewFlatteningDisabled);
       });
